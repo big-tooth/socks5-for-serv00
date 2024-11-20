@@ -16,7 +16,9 @@ jobs:
         id: get-accounts
         run: |
           echo "$ACCOUNTS_JSON" > accounts.json
+          echo "---------------------"
           echo "$ACCOUNTS_JSON"
+          echo "====================="
         env:
           ACCOUNTS_JSON: ${{ secrets.ACCOUNTS_JSON }}
         # 从 GitHub Secrets 获取 ACCOUNTS_JSON 变量，并保存到文件 accounts.json
